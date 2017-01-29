@@ -1,17 +1,23 @@
 module.exports = {
-  entry: './src/js/app.jsx',
+  entry: './entry.js',
   output: {
     path: __dirname,
     filename: 'app.js'
   },
   module: {
-    loaders: [{
-      test: /\.jsx?$/,
-      loader: 'babel',
-      exclude: /node_modules/,
-      query: {
-        presets: ['es2015', 'react']
+    loaders: [
+      {
+        test: /\.jsx?$/,
+        loader: 'babel',
+        exclude: /node_modules/,
+        query: {
+          presets: ['es2015', 'react']
+        }
+      },
+      {
+        test: /\.scss?$/,
+        loaders: ["style-loader", "css-loader", "sass-loader"]
       }
-    }]
+    ]
   }
 };
