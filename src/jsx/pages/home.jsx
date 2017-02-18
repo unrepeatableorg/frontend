@@ -4,9 +4,11 @@ import Navbar from '../components/navbar.jsx';
 export default class Home extends React.Component {
   render() {
     return (
-      <div className="view--home">
+      <div className="container-fluid">
         <Navbar />
-        This is home page
+        <div className="container">
+          This is home page
+        </div>
       </div>
     )
   };

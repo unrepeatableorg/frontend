@@ -4,9 +4,11 @@ import Navbar from '../components/navbar.jsx';
 export default class Keys extends React.Component {
   render() {
     return (
-      <div className="view--keys">
+      <div className="container-fluid">
         <Navbar />
-        This is keys page
+        <div className="container">
+          This is keys page
+        </div>
       </div>
     )
   };
