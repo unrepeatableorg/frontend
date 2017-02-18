@@ -2,5 +2,11 @@
 // Import reset stylesheet
 @import 'reset';
 
+// Import variables
+@import 'variables';
+
 // Import general layout styles
 @import 'layout';
+
+// Import navbar styles
+@import 'navbar';
