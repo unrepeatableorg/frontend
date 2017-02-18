@@ -1,12 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { Router, Route, browserHistory, Link } from 'react-router';
 
-class App extends React.Component {
-  render() {
-    return (
-      <h1> Welcome to unrepeatable.org </h1>
-    );
-  }
-}
+import Home from './pages/home.jsx';
+import About from './pages/about.jsx';
+import Keys from './pages/keys.jsx';
 
-ReactDOM.render(<App />, document.getElementById('app'));
+ReactDOM.render(
+  <Router history={browserHistory}>
+    <Route path="/" component={Home}/>
+    <Route path="/keys" component={Keys}/>
+    <Route path="/about" component={About}/>
+  </Router>,
+  document.getElementById('app')
+);
