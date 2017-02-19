@@ -1,0 +1,11 @@
+@keyframes light-spectrum {
+    0%    { color: $pink-1;   }
+    12.5% { color: $red-1;    }
+    25%   { color: $orange-1; }
+    37.5% { color: $yellow-1; }
+    50%   { color: $green-1;  }
+    62.5% { color: $cyan-1;   }
+    75%   { color: $blue-1;   }
+    87.5% { color: $purple-1; }
+    100%  { color: $pink-1;   }
+}
