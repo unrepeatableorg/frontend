@@ -20,7 +20,11 @@ export default class Navbar extends React.Component {
     let listItems = this.links.map((item) => {
       return (
         <li key={item.title} className="navbar__list-item">
-          <Link className="navbar__link" to={item.link}>{item.title}</Link>
+          <Link className="navbar__link"
+                activeClassName="navbar__link--active"
+                to={item.link}>
+            {item.title}
+          </Link>
         </li>
       );
     });

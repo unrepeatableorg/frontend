@@ -16,3 +16,7 @@
     font-weight: 300;
     font-family: $main-font;
 }
+
+.navbar__link--active {
+    animation: light-spectrum 7s infinite;
+}
