@@ -1,5 +1,7 @@
 .navbar {
     background-color: $black-1;
+    height: 50px;
+    position: fixed;
 }
 
 .navbar__list-item {
@@ -12,7 +14,6 @@
     color: $white-1;
     text-decoration: none;
     font-size: 20px;
-    line-height: normal;
     font-weight: 300;
     font-family: $main-font;
 }
