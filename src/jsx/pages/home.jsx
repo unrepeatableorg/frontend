@@ -1,9 +1,11 @@
 import React from 'react';
 
+import PostsList from '../components/PostsList.jsx';
+
 const Home = () => (
   <div className="view">
     <div className="container">
-      This is home page
+      <PostsList />
     </div>
   </div>
 );
