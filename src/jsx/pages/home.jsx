@@ -1,8 +1,10 @@
 import React from 'react';
 
 const Home = () => (
-  <div className="container">
-    This is home page
+  <div className="view">
+    <div className="container">
+      This is home page
+    </div>
   </div>
 );
 
