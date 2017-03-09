@@ -1,6 +1,10 @@
+
+html, body, #app, #app > div {
+    height: 100%;
+}
+
 body {
     background-color: $black-2;
-    min-height: 100%;
 }
 
 .container {
@@ -16,4 +20,6 @@ body {
     margin: 0 auto;
     padding-top: 50px;
     min-height: 100%;
+    margin-bottom: -80px;
+    padding-bottom: 130px;
 }
