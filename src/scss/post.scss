@@ -1,0 +1,48 @@
+.post {
+    width: 100%;
+    margin-bottom: 50px;
+    background-color: #333;
+    color: #ffffff;
+}
+
+/* Image */
+
+.post__img {
+    width: 100%;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Embedded video */
+
+.post__embedded-video {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+}
+
+.post__embedded-video > iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* Post info */
+
+.post__info {
+    font-family: $main-font;
+    padding: 10px;
+    font-weight: 300;
+}
+
+.post__title {
+    font-size: 30px;
+    margin-bottom: 10px;
+    color: $white-1;
+}
+
+.post__creation-info {
+    color: $gray-4;
+}
