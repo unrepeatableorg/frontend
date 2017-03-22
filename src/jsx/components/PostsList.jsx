@@ -12,7 +12,6 @@ class PostsList extends React.Component {
   }
 
   render() {
-
     const posts = this.state.posts.map(p => (
       <Post post={p} key={p.id} />
     ));

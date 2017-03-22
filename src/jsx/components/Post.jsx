@@ -9,19 +9,19 @@ import React from 'react';
  * @params {string} [props.post.code]
  * @params {string} [props.post.image]
  */
-const Post = (props) => {
+const Post = props => {
 
   /**
    * @params {string} imageUrl
    */
-  const getImage = (imageUrl) => (
+  const getImage = imageUrl => (
     <img className="post__img" src={imageUrl} />
   );
 
   /**
    * @params {string} videoCode
    */
-  const getVideo = (videoCode) => (
+  const getVideo = videoCode => (
     <div className="post__embedded-video"
          dangerouslySetInnerHTML={{__html: videoCode}}>
     </div>
