@@ -1,27 +1,18 @@
+// External dependencies
 import React from 'react';
 
+// Internal dependencies
 import Post from './Post.jsx';
 
-class PostsList extends React.Component {
-
-  constructor() {
-    super();
-    this.state = {
-      posts: []
-    };
-  }
-
-  render() {
-    const posts = this.state.posts.map(p => (
-      <Post post={p} key={p.id} />
-    ));
-
-    return (
-      <div className="posts-list">
-        {posts}
-      </div>
-    );
-  }
-}
+/**
+ * @param {Object} props
+ *
+ * @returns {ReactElement}
+ */
+const PostsList = props => (
+  <div className="posts-list">
+    {props.posts.map(p => <Post post={p} key={p.id} />)}
+  </div>
+);
 
 export default PostsList;

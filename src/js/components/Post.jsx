@@ -1,3 +1,4 @@
+// External dependencies
 import React from 'react';
 
 /**
@@ -5,14 +6,17 @@ import React from 'react';
  * @params {Object} props.post
  * @params {integer} props.post.id
  * @params {string} props.post.title
+ * @params {string} props.post.date
+ * @params {string} props.post.media
  * @params {string} [props.post.author]
- * @params {string} [props.post.code]
- * @params {string} [props.post.image]
+ *
+ * @returns {ReactElement}
  */
 const Post = props => {
-
   /**
    * @params {string} imageUrl
+   *
+   * @returns {ReactElement}
    */
   const getImage = imageUrl => (
     <img className="post__img" src={imageUrl} />
@@ -20,6 +24,8 @@ const Post = props => {
 
   /**
    * @params {string} videoCode
+   *
+   * @returns {ReactElement}
    */
   const getVideo = videoCode => (
     <div className="post__embedded-video"
@@ -29,8 +35,8 @@ const Post = props => {
 
   return (
     <div className="post">
-      {props.post.type === 'image' && getImage(props.post.image)}
-      {props.post.type === 'embedded-video' && getVideo(props.post.code)}
+      {props.post.type === 'image' && getImage(props.post.media)}
+      {props.post.type === 'embedded-video' && getVideo(props.post.media)}
       <div className="post__info">
         <div className="post__title"> {props.post.title} </div>
         <div className="post__creation-info">
@@ -39,6 +45,16 @@ const Post = props => {
       </div>
     </div>
   );
+};
+
+Post.propTypes = {
+  post: React.PropTypes.shape({
+    id: React.PropTypes.number.isRequired,
+    title: React.PropTypes.string.isRequired,
+    date: React.PropTypes.string.isRequired,
+    media: React.PropTypes.string.isRequired,
+    author: React.PropTypes.string,
+  })
 };
 
 export default Post;

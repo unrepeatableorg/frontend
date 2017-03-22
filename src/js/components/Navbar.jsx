@@ -1,8 +1,11 @@
+// External dependencies
 import React from 'react';
 import { Link, IndexLink } from 'react-router';
 
+/**
+ * @returns {ReactElement}
+ */
 const Navbar = () => {
-
   const linkTypes = [ IndexLink, Link ];
 
   const links = [

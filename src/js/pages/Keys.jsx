@@ -1,5 +1,9 @@
+// External dependencies
 import React from 'react';
 
+/**
+ * @returns {ReactElement}
+ */
 const Keys = () => (
   <div className="view">
     <div className="container">
