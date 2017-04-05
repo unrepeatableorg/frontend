@@ -1,3 +1,5 @@
+import CREATE_POST from './actionTypes.js';
+
 /**
  * @param {string} title
  * @param {string} type ('image' | 'embedded-video' | 'text')
@@ -9,7 +11,7 @@
 export function createPost(title, type, media, author) {
   return {
     id: Date.now(),
-    type: 'CREATE_POST',
+    type: CREATE_POST,
     date: (new Date()).toISOString().slice(0, 10),
     title,
     author,

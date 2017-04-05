@@ -1,6 +1,9 @@
 // External dependencies
 import omit from 'lodash/omit';
 
+// Internal dependencies
+import CREATE_POST from '../actions/actionTypes.js';
+
 /**
  * @param {Array} [state]
  * @param {string} action
@@ -9,7 +12,7 @@ import omit from 'lodash/omit';
  */
 function posts(state = [], action) {
   switch (action.type) {
-    case 'CREATE_POST':
+    case CREATE_POST:
       return [omit(action, 'type')].concat(state);
     default:
       return state;
