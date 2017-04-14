@@ -1,4 +1,4 @@
-import CREATE_POST from './actionTypes.js';
+import { CREATE_POST } from './actionTypes.js';
 
 /**
  * @param {string} title
