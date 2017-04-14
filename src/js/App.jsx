@@ -1,6 +1,5 @@
 // External dependencies
 import React from 'react';
-import ReactDOM from 'react-dom';
 import { Router, Route, IndexRoute } from 'react-router';
 import { Provider } from 'react-redux';
 
@@ -11,7 +10,10 @@ import Home from './pages/Home.jsx';
 import About from './pages/About.jsx';
 import Keys from './pages/Keys.jsx';
 
-ReactDOM.render(
+/**
+ * @returns {ReactElement}
+ */
+const App = () => (
   <Provider store={store}>
     <Router history={history}>
       <Route path="/" component={Main}>
@@ -20,6 +22,7 @@ ReactDOM.render(
         <Route path="/about" component={About} />
       </Route>
     </Router>
-  </Provider>,
-  document.getElementById('app')
+  </Provider>
 );
+
+export default App;

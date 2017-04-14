@@ -1,23 +1,40 @@
+// External dependencies
+const { resolve } = require('path');
+const webpack = require('webpack');
+
 module.exports = {
-  entry: './entry.js',
+  entry: [
+    'react-hot-loader/patch',
+    'webpack-dev-server/client?http://localhost:8080',
+    'webpack/hot/only-dev-server',
+    resolve(__dirname, 'entry.jsx')
+  ],
   output: {
-    path: __dirname,
-    filename: 'app.js'
+    path: resolve(__dirname, 'dist'),
+    filename: 'app.js',
+    publicPath: '/'
+  },
+  devtool: 'inline-source-map',
+  devServer: {
+    hot: true,
+    contentBase: resolve(__dirname, 'dist'),
+    publicPath: '/'
   },
   module: {
-    loaders: [
+    rules: [
       {
         test: /\.jsx?$/,
-        loader: 'babel-loader',
-        exclude: /node_modules/,
-        query: {
-          presets: ['es2015', 'react']
-        }
+        use: ['babel-loader'],
+        exclude: /node_modules/
       },
       {
         test: /\.scss?$/,
         loaders: ['style-loader', 'css-loader', 'sass-loader']
       }
-    ]
-  }
+    ],
+  },
+  plugins: [
+    new webpack.HotModuleReplacementPlugin(),
+    new webpack.NamedModulesPlugin()
+  ]
 };
